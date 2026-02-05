@@ -1,142 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb); /* Soft gradient background */
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column;
-    text-align: center;
-    color: #333;
-    overflow: hidden;
+  background-color: #fef7f7;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
 }
 
-/* Heart container */
-.heart-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    position: relative;
-    animation: bounce 1s ease infinite; /* Animation for heart */
-}
-
-/* Heart design */
 .heart {
-    font-size: 8rem; /* Larger heart */
-    cursor: pointer;
-    color: #ff4081;
-    transition: transform 0.3s ease, color 0.3s ease;
-    text-shadow: 0 0 10px rgba(255, 64, 129, 0.6); /* Soft glow effect */
+  font-size: 5rem;
+  cursor: pointer;
 }
 
-.heart:hover {
-    transform: scale(1.2); /* Slightly larger on hover */
-    color: #ff69b4; /* Lighter pink color */
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-15px);
-    }
-    60% {
-        transform: translateY(-7px);
-    }
-}
-
-/* Button container */
 .button-container {
-    display: none; /* Initially hidden */
-    margin-top: 30px;
-    animation: fadeIn 0.8s ease forwards; /* Smooth fade-in for buttons */
+  display: none;
 }
 
-/* Button fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Styling for buttons */
-.yes-no-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
-}
-
-/* Button Style */
 .yes-no-buttons button {
-    padding: 18px 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 30px; /* Soft rounded corners */
-    background-color: #ff4081;
-    color: white;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    position: relative;
+  padding: 12px 30px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff4081;
+  color: white;
+  cursor: pointer;
 }
 
-.yes-no-buttons button:hover {
-    background-color: #ff69b4; /* Lighter pink color */
-    transform: translateY(-5px); /* Slight hover lift */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
-}
-
-/* Message Text */
-.message {
-    font-size: 2rem;
-    color: #ff4081;
-    margin-top: 40px;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.message.show {
-    opacity: 1;
-}
-
-/* Styling for "No" button */
 #no-btn {
-    background-color: #ff4081; /* Default color */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    position: absolute; /* Position it randomly later */
+  background-color: #ff4d4d;
 }
 
-/* When the "No" button is clicked, it changes to red */
-#no-btn.clicked {
-    background-color: #ff4d4d;
+.message {
+  display: none;
+  font-size: 1.6rem;
+  color: #ff4081;
+  margin-top: 20px;
+  font-weight: bold;
 }
-
-/* Styling for button container */
-.yes-no-buttons {
-    position: relative; /* Ensure buttons stay within their container */
-}
-
-.content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
