@@ -25,14 +25,16 @@ body {
     align-items: center;
     margin-bottom: 40px;
     position: relative;
+    animation: bounce 1s ease infinite; /* Animation for heart */
 }
 
 /* Heart design */
 .heart {
-    font-size: 6rem; /* Larger heart */
+    font-size: 8rem; /* Larger heart */
     cursor: pointer;
     color: #ff4081;
     transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.6); /* Soft glow effect */
 }
 
 .heart:hover {
@@ -40,33 +42,66 @@ body {
     color: #ff69b4; /* Lighter pink color */
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
 /* Button container */
 .button-container {
     display: none; /* Initially hidden */
     margin-top: 30px;
+    animation: fadeIn 0.8s ease forwards; /* Smooth fade-in for buttons */
 }
 
+/* Button fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+/* Styling for buttons */
+.yes-no-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
 
+/* Button Style */
 .yes-no-buttons button {
-    padding: 16px 40px;
+    padding: 18px 40px;
     font-size: 1.5rem;
     cursor: pointer;
     border: none;
-    border-radius: 50px; /* Circular buttons */
+    border-radius: 30px; /* Soft rounded corners */
     background-color: #ff4081;
     color: white;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
 }
 
 .yes-no-buttons button:hover {
-    background-color: #ff69b4; /* Hover effect */
-    transform: translateY(-4px); /* Slight hover lift */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+    background-color: #ff69b4; /* Lighter pink color */
+    transform: translateY(-5px); /* Slight hover lift */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
 }
 
-/* Message text */
+/* Message Text */
 .message {
     font-size: 2rem;
     color: #ff4081;
@@ -84,6 +119,7 @@ body {
 #no-btn {
     background-color: #ff4081; /* Default color */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute; /* Position it randomly later */
 }
 
 /* When the "No" button is clicked, it changes to red */
@@ -91,9 +127,9 @@ body {
     background-color: #ff4d4d;
 }
 
-button#no-btn {
-    position: absolute;
-    transition: all 0.3s ease-in-out;
+/* Styling for button container */
+.yes-no-buttons {
+    position: relative; /* Ensure buttons stay within their container */
 }
 
 .content-container {
@@ -102,5 +138,3 @@ button#no-btn {
     align-items: center;
     flex-direction: column;
 }
-
-
