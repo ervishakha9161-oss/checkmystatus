@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Body styling */
+
 body {
     background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb); /* Soft gradient background */
     font-family: 'Arial', sans-serif;
@@ -117,3 +117,4 @@ button#no-btn {
     align-items: center;
     flex-direction: column;
 }
+
