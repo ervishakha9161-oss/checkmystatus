@@ -31,3 +31,22 @@ function moveNoButton() {
 /* works on click + touch */
 noBtn.addEventListener('click', moveNoButton);
 noBtn.addEventListener('touchstart', moveNoButton);
+
+
+const heartsContainer = document.querySelector('.hearts');
+
+setInterval(() => {
+  const heart = document.createElement('div');
+  heart.classList.add('heart-bg');
+  heart.innerHTML = '❤️';
+
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+  heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+
+  heartsContainer.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}, 300);
