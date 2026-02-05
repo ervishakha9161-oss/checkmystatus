@@ -97,6 +97,7 @@ body {
 
 button#no-btn {
     position: absolute;
+    left: 50%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -106,3 +107,4 @@ button#no-btn {
     align-items: center;
     flex-direction: column;
 }
+
