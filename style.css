@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb); /* Soft gradient background */
     font-family: 'Arial', sans-serif;
@@ -43,6 +42,7 @@ body {
 
 /* Button container */
 .button-container {
+    display: none; /* Initially hidden */
     margin-top: 30px;
 }
 
@@ -96,25 +96,13 @@ body {
 }
 
 button#no-btn {
-    position: relative;
+    position: absolute;
     transition: all 0.3s ease-in-out;
 }
 
-/* Add smooth movement for the "No" button */
-button#no-btn {
-    position: relative;
-}
-
-/* Position the button with absolute coordinates */
-button#no-btn {
-    position: absolute;
-}
-
-/* Make sure everything is centered correctly */
 .content-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
