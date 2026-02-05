@@ -4,8 +4,7 @@ document.getElementById('heart1').addEventListener('click', function() {
 
 document.getElementById('yes-btn').addEventListener('click', function() {
     document.getElementById('message').textContent = 'I love you ❤️';
-    
-    // Move the "No" button to a random position after "Yes" is clicked
+    // No button will just move to a new random location after "Yes" is clicked
     moveNoButton();
 });
 
@@ -13,19 +12,20 @@ document.getElementById('yes-btn').addEventListener('click', function() {
 function moveNoButton() {
     let noButton = document.getElementById('no-btn');
     
-    // Generate random positions for the button
+    // Generate random positions for the button within the window
     let randomX = Math.random() * (window.innerWidth - noButton.offsetWidth); // Random X position
     let randomY = Math.random() * (window.innerHeight - noButton.offsetHeight); // Random Y position
     
-    // Set the new position for the button
-    noButton.style.position = 'absolute'; // Position it absolutely so it can move
+    // Set the new position for the "No" button
+    noButton.style.position = 'absolute'; // Allow absolute positioning
     noButton.style.left = `${randomX}px`; // Set random left position
     noButton.style.top = `${randomY}px`; // Set random top position
 }
 
+// Keep moving the "No" button when clicked
 let noButton = document.getElementById('no-btn');
 
-// When the "No" button is clicked, move it to a random position
 noButton.addEventListener('click', function() {
-    moveNoButton(); // Move the button to a new random position on click
+    // Move the "No" button to a new random position on each click
+    moveNoButton();
 });
