@@ -43,7 +43,6 @@ body {
 
 /* Button container */
 .button-container {
-    display: none; /* Initially hidden */
     margin-top: 30px;
 }
 
@@ -109,11 +108,6 @@ button#no-btn {
 /* Position the button with absolute coordinates */
 button#no-btn {
     position: absolute;
-}
-
-/* Add smooth transition for background color changes */
-button#no-btn {
-    transition: all 0.5s ease;
 }
 
 /* Make sure everything is centered correctly */
