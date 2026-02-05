@@ -120,6 +120,7 @@ body {
     background-color: #ff4081; /* Default color */
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: absolute; /* Position it randomly later */
+    left:55%
 }
 
 /* When the "No" button is clicked, it changes to red */
@@ -138,3 +139,4 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
