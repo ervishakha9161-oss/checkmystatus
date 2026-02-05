@@ -93,56 +93,13 @@ body {
     opacity: 0;
 }
 
-/* Party Pop-Up styling */
-.party-popup {
-    display: none;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 1.5rem;
-    color: #ff4081;
-    z-index: 100;
+/* Add smooth movement for the button */
+button {
+    position: relative; /* Allow button to be positioned freely */
+    z-index: 10; /* Ensure it is above other elements */
+    transition: all 0.5s ease; /* Smooth transition effect for button movement */
 }
 
-.party-popup p {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-/* Confetti Effect */
-@keyframes confetti {
-    0% { transform: translateY(0) rotate(0); opacity: 1; }
-    100% { transform: translateY(500px) rotate(360deg); opacity: 0; }
-}
-
-.confetti {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    background-color: transparent;
-    animation: confetti 3s ease-in-out infinite;
-}
-
-.confetti::before, .confetti::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    background-color: #ff4081;
-    animation: confetti 1.5s ease-in-out infinite;
-}
-
-.confetti::before {
-    left: 50px;
-}
-
-.confetti::after {
-    left: 100px;
+button#no-btn {
+    transition: all 0.5s ease; /* Smooth movement effect */
 }
