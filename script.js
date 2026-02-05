@@ -4,9 +4,13 @@ document.getElementById('heart1').addEventListener('click', function() {
 
 document.getElementById('yes-btn').addEventListener('click', function() {
     document.getElementById('message').textContent = 'I love you ❤️';
-    
-    // Move the "No" button to a random position after "Yes" is clicked
+    document.getElementById('message').classList.add('show');
+});
+
+document.getElementById('no-btn').addEventListener('click', function() {
     moveNoButton();
+    // Change the "No" button color to red when clicked
+    this.style.backgroundColor = '#ff4d4d';
 });
 
 // Function to move the "No" button to a random position
@@ -22,11 +26,3 @@ function moveNoButton() {
     noButton.style.left = `${randomX}px`; // Set random left position
     noButton.style.top = `${randomY}px`; // Set random top position
 }
-
-// Keep moving the "No" button when clicked
-let noButton = document.getElementById('no-btn');
-
-noButton.addEventListener('click', function() {
-    // Move the "No" button to a new random position on each click
-    moveNoButton();
-});
