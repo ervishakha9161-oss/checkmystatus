@@ -10,7 +10,7 @@ document.getElementById('yes-btn').addEventListener('click', function() {
 document.getElementById('no-btn').addEventListener('click', function() {
     moveNoButton();
     // Change the "No" button color to red when clicked
-    this.style.backgroundColor = '#ff4d4d';
+    this.classList.add('clicked'); // Adds the red color when clicked
 });
 
 // Function to move the "No" button to a random position
@@ -22,7 +22,6 @@ function moveNoButton() {
     let randomY = Math.random() * (window.innerHeight - noButton.offsetHeight); // Random Y position
     
     // Set the new position for the "No" button
-    noButton.style.position = 'absolute'; // Allow absolute positioning
     noButton.style.left = `${randomX}px`; // Set random left position
     noButton.style.top = `${randomY}px`; // Set random top position
 }
