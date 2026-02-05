@@ -5,35 +5,27 @@ document.getElementById('heart1').addEventListener('click', function() {
 document.getElementById('yes-btn').addEventListener('click', function() {
     document.getElementById('message').textContent = 'I love you ❤️';
     
-    // Make the "No" button move to a random position on the page
+    // Move the "No" button to a random position after "Yes" is clicked
     moveNoButton();
 });
 
 // Function to move the "No" button to a random position
 function moveNoButton() {
     let noButton = document.getElementById('no-btn');
-    // Set the "No" button to move to a random position
-    let randomX = Math.random() * window.innerWidth; // Random X position
-    let randomY = Math.random() * window.innerHeight; // Random Y position
     
-    // Set the new position
-    noButton.style.position = 'absolute'; // Make it absolute so it can move freely
-    noButton.style.left = `${randomX}px`; // Random left position
-    noButton.style.top = `${randomY}px`; // Random top position
+    // Generate random positions for the button
+    let randomX = Math.random() * (window.innerWidth - noButton.offsetWidth); // Random X position
+    let randomY = Math.random() * (window.innerHeight - noButton.offsetHeight); // Random Y position
+    
+    // Set the new position for the button
+    noButton.style.position = 'absolute'; // Position it absolutely so it can move
+    noButton.style.left = `${randomX}px`; // Set random left position
+    noButton.style.top = `${randomY}px`; // Set random top position
 }
 
 let noButton = document.getElementById('no-btn');
 
-// When the "No" button is clicked, change its text to "Yes" and move it
+// When the "No" button is clicked, move it to a random position
 noButton.addEventListener('click', function() {
-    // Change the text of "No" to "Yes"
-    noButton.textContent = 'Yes';
-    
-    // Swap the IDs so the button now behaves like "Yes"
-    noButton.id = 'yes-btn';
-    document.getElementById('yes-btn').id = 'no-btn';
-    document.getElementById('yes-btn').textContent = 'No';
-
-    // Make the "No" button move again after it's clicked
-    moveNoButton();
+    moveNoButton(); // Move the button to a new random position on click
 });
