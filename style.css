@@ -107,3 +107,14 @@ button, .message {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+button {
+    position: relative; /* Allow positioning relative to normal flow */
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+button#no-btn {
+    transition: all 0.5s ease; /* Smooth movement effect */
+}
+
+
