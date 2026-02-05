@@ -1,5 +1,6 @@
 // Show the "Yes" and "No" buttons when the heart is clicked
 document.getElementById('heart1').addEventListener('click', function() {
+    // Both "Yes" and "No" buttons will show after the heart click
     document.getElementById('buttonContainer').style.display = 'block'; 
 });
 
@@ -27,4 +28,3 @@ function moveNoButton() {
     noButton.style.left = `${randomX}px`; // Set random left position
     noButton.style.top = `${randomY}px`; // Set random top position
 }
-
